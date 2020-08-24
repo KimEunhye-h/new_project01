@@ -1,0 +1,5 @@
+127.0.0.1 - - [17/Aug/2020:11:02:58 +0900] "GET / HTTP/1.1" 404 750
+192.168.0.21 - - [17/Aug/2020:11:03:16 +0900] "POST /app/LoginSelect HTTP/1.1" 200 85
+192.168.0.21 - - [17/Aug/2020:11:03:16 +0900] "POST /app/SubjectDayTotal HTTP/1.1" 200 72
+192.168.0.21 - - [17/Aug/2020:11:03:16 +0900] "POST /app/ItemSelectMulti HTTP/1.1" 200 20
+192.168.0.21 - - [17/Aug/2020:11:03:16 +0900] "POST /app/SubjectList HTTP/1.1" 200 12

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/friendstroke_all"
+    android:weightSum="100"
+    android:gravity="center">
+
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="95"
+        android:weightSum="100"
+        android:gravity="center|top">
+
+
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:text="NAME"
+            android:textSize="25dp"
+            android:layout_weight="10"
+            android:textColor="@color/colorMain"
+            android:fontFamily="@font/notosansb"
+            android:gravity="center"
+            android:layout_marginTop="80dp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="15"
+            android:weightSum="100"
+            android:gravity="center"
+            >
+
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="이름을 입력하세요"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@drawable/friendstroke"
+                android:textColorHint="@color/colorMain"
+                android:layout_weight="70" />
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:textSize="15dp"
+            android:text="중복확인"
+            android:textColor="@color/colorMain"
+            android:fontFamily="@font/notosansb"
+            android:background="@drawable/block_color4_radius_line_org"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:text="JOB"
+            android:textSize="25dp"
+            android:layout_weight="10"
+            android:textColor="@color/colorMain"
+            android:fontFamily="@font/notosansb"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:weightSum="100"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/etJob"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="직업을 선택해주세요"
+                android:padding="10dp"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/friendstroke"
+                android:textColorHint="@color/colorMain"
+                android:layout_weight="70"/>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnChange"
+            android:layout_width="100dp"
+            android:layout_height="46dp"
+            android:text="변경하기"
+            android:textColor="#fff"
+            android:fontFamily="@font/notosansb"
+            android:background="@drawable/btn_org"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="25"
+            android:gravity="center"
+            android:layout_marginTop="35dp"
+            >
+
+            <Button
+                android:id="@+id/btnJoin"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="가입"
+                android:textColor="#fff"
+                android:fontFamily="@font/notosansb"
+                android:background="@drawable/btn_org"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="취소"
+                android:fontFamily="@font/notosansb"
+                android:background="@drawable/block_color4_radius_line_org"
+                style="?android:attr/borderlessButtonStyle"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

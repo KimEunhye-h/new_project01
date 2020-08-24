@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal"
+            android:background="@drawable/block_color4_radius_line_org"
+            android:weightSum="100"
+            style="?android:attr/borderlessButtonStyle"
+            android:stateListAnimator="@null"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/accessImage"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:padding="4dp"
+                android:src="@drawable/friend_logo"
+                android:layout_weight="13"
+
+
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="40"
+                android:weightSum="10"
+
+                >
+
+                <TextView
+                    android:id="@+id/openClose"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:gravity="center|left"
+                    android:text="가입날짜"
+                    android:fontFamily="@font/notosansb"/>
+
+                <TextView
+                    android:id="@+id/accessName"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:gravity="left"
+                    android:text="직업 카테고리"
+                    android:fontFamily="@font/notosansb"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/accessTime"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="닉네임"
+                android:textSize="15sp"
+                android:fontFamily="@font/notosansb"
+                android:layout_weight="23"/>
+
+            <Button
+                android:id="@+id/friend_add_btn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="14"
+                android:background="@drawable/plus_btn"
+                style="?android:attr/borderlessButtonStyle">
+            </Button>
+
+
+
+        </LinearLayout>
+
+
+</LinearLayout>

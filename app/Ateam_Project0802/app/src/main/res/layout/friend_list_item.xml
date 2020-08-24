@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    android:background="@drawable/noticebackground">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="20"
+        android:gravity="center|center_horizontal"
+        android:text="이름"
+        android:textColor="@color/textcolorsub"
+        android:fontFamily="@font/notosansb"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="15"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="20"
+        android:gravity="center|center_vertical"
+        android:text="05:25:36"
+        android:textColor="@color/colorMain"
+        android:textSize="16dp"
+        android:fontFamily="@font/notosansb"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="12"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="20"
+        android:text="삭제"
+        android:textSize="12dp"
+        android:textColor="@color/colorMain"
+        android:background="@drawable/block_color4_radius_line_org"
+        android:fontFamily="@font/notosansb"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="7"/>
+
+</LinearLayout>

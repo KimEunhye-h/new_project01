@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="job.mapper">
+
+<update id="comment">
+
+update COMMUNITY_job set 
+commentCnt = ((select count(*) from COMMUNITY_job_comment where pid = ${pid})+1) where id = ${pid}
+
+</update>
+
+<select id="top_list" resultType="communityJob.JobVO">
+		select sc.* from COMMUNITY_job sc,members m where m.admin='y' and m.name = sc.writer order by sc.id desc
+</select>
+
+
+<delete id="comment_delete">
+	delete from COMMUNITY_job_comment where id=#{id}
+</delete>
+
+<update id="comment_update">
+	update COMMUNITY_job_comment set content = #{content} where id = #{id}
+</update>
+
+<select id="comment_list" resultType="communityJob.JobCommentVO">
+	select c.*,(select name from members m where m.name=writer) name,
+			to_char(writedate,'yyyy-mm-dd hh24:mi:ss') writedate 
+	from COMMUNITY_job_comment c 
+	where pid=#{pid} order by id desc
+</select>
+
+<insert id="comment_insert">
+	insert into COMMUNITY_job_comment(content,pid,writer,secretReply)
+	values(#{content},#{pid},#{writer},#{secretReply})
+</insert>
+
+<delete id="delete">
+	delete from COMMUNITY_job where id=#{id}
+</delete>
+
+<update id="update">
+	update COMMUNITY_job set title=#{title},content=#{content},filename=#{filename, jdbcType=VARCHAR},filepath=#{filepath, jdbcType=VARCHAR}
+	where id=#{id}
+</update>
+
+<select id="detail" resultType="communityJob.JobVO">
+	select b.*,(select name from members m where m.name = b.writer) name from COMMUNITY_job b where id=#{id}
+</select>
+
+<update id="read">
+	update COMMUNITY_job set readcnt=readcnt+1 where id=#{id}
+</update>
+
+<insert id="insert">
+insert into COMMUNITY_job(title, content, writer, filename, filepath)
+values (#{title}, #{content}, #{writer}, #{filename, jdbcType=VARCHAR}, #{filepath, jdbcType=VARCHAR})
+</insert>
+
+<sql id="search">
+   <if test="search=='title' or search=='content' ">
+      where ${search} like '%' || #{keyword} || '%'
+   </if>
+
+   <if test="search=='writer'">
+   where <include refid="writer"></include>
+   </if>
+
+   <if test="search=='all'">
+      where title like '%' || #{keyword} || '%'
+      or content like '%' || #{keyword} || '%'
+      or <include refid="writer"/>
+   
+   </if>
+</sql>
+<sql id="writer">
+writer in (select name from members 
+         where name like '%' || #{keyword} || '%')
+</sql>
+
+<select id="list" resultType="communityUn.UnVO">
+select n.*, (select name from members 
+         where members.name = writer)name
+from (select b.*, rownum no 
+    from (select * from COMMUNITY_job 
+      <include refid="search"/> order by id) b
+   order by no desc) n
+where no between #{beginList} and #{endList}
+</select>
+
+<select id="total" resultType="Integer">
+select count(*) from COMMUNITY_job <include refid="search"/>
+</select>
+
+</mapper>

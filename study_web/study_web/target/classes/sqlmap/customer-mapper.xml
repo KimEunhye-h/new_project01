@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="customer.mapper">
+
+<update id="update">
+update members set name=#{name}, job=#{job}, parents=#{parents} where email=#{email}
+</update>
+
+<select id="detail" resultType="customer.CustomerVO">
+select * from members where email=#{email}
+</select>
+
+<delete id="delete">
+delete from members where email=#{email}
+</delete>
+
+
+<select id="list" resultType="customer.CustomerVO">
+select * from members order by join_date
+</select>
+</mapper>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Ddayplus"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/ddayAdd_back_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@drawable/back_view3"
+            />
+
+        <TextView
+            android:id="@+id/d_day_title_reg"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/block_color4"
+            android:gravity="left|center"
+            android:text="D-Day를 추가해주세요."
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="160dp"
+            tools:layout_editor_absoluteY="41dp"
+            android:fontFamily="@font/notosansb"
+            android:layout_weight="8.5"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:layout_weight="20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:gravity="center_vertical"
+            android:text="D-Day명"
+            android:textColor="@color/colorMain"
+            android:fontFamily="@font/notosansb"/>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:hint="D-day명을 입력해주세요."
+            android:background="@drawable/noticebackground"
+            android:fontFamily="@font/notosansb"
+            android:paddingLeft="10dp"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        android:layout_weight="40">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center_vertical"
+        android:text="날짜"
+        android:textColor="@color/colorMain"
+        android:fontFamily="@font/notosansb"
+        />
+
+    <TextView
+        android:id="@+id/editNewKidBirth"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:onClick="mOnClick_DatePick"
+        android:background="@drawable/noticebackground"
+        android:clickable="true"
+        android:fontFamily="@font/notosansb"
+        android:paddingLeft="10dp"
+
+        />
+
+        <Button
+            android:id="@+id/ddayadd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorMain"
+            android:text="추가하기"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/notosansb"/>
+
+
+    </LinearLayout>
+
+    <!-- <DatePicker
+         android:id="@+id/dataPicker"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:calendarViewShown="false"
+         android:foregroundGravity="center" />-->
+
+
+
+
+</LinearLayout>

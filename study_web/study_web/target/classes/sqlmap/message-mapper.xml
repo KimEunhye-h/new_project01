@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="me.mapper">
+
+
+
+
+<delete id="mylistdelete">
+	delete from mylist where title=#{title}
+</delete>
+
+
+
+<select id="mydetail" resultType="message.MylistVO">
+	select b.* from mylist b where title=#{title}
+</select>
+
+<select id="mylist" resultType="message.MylistVO">
+select n.*,rownum no1 
+from (select b.*, rownum no 
+    from (select * from mylist where writer = #{sender}) b) n
+   where no between #{beginList} and #{endList} order by no1 desc
+</select>
+
+<select id="total3" resultType="Integer">
+select count(*) from mylist where writer= #{sender}
+</select>
+
+
+<delete id="delete">
+	delete from tbl_message where mid=#{mid}
+</delete>
+
+
+
+<insert id="insert">
+insert into tbl_message(targetid,sender,message )
+values (#{targetid},#{sender},#{message})
+</insert>
+
+<select id="list2" resultType="message.MessageVO">
+select n.*
+from (select b.*, rownum no 
+    from (select * from tbl_message where sender = #{sender} order by mid) b
+   order by no desc ) n
+where no between #{beginList} and #{endList} 
+</select>
+
+<select id="total2" resultType="Integer">
+select count(*) from tbl_message  where sender = #{sender}
+</select>
+
+
+
+<select id="list" resultType="message.MessageVO">
+select n.*
+from (select b.*, rownum no 
+    from (select * from tbl_message where targetid = #{targetid} order by mid) b
+   order by no desc ) n
+where no between #{beginList} and #{endList} 
+
+</select>
+
+<select id="total" resultType="Integer">
+select count(*) from tbl_message where targetid = #{targetid}
+</select>
+
+<select id="detail" resultType="message.MessageVO">
+	select b.* from tbl_message b where mid=#{mid}
+</select>
+
+<sql id="search">
+   <if test="search=='title' or search=='content' ">
+      where ${search} like '%' || #{keyword} || '%'
+   </if>
+
+   <if test="search=='writer'">
+   where <include refid="writer"></include>
+   </if>
+
+   <if test="search=='all'">
+      where title like '%' || #{keyword} || '%'
+      or content like '%' || #{keyword} || '%'
+      or <include refid="writer"/>   
+   </if>
+</sql>
+<sql id="writer">
+writer in (select name from members
+         where name like '%' || #{keyword} || '%')
+</sql>
+
+
+</mapper>

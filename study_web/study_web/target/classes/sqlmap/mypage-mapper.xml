@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mypage.mapper">
+
+<select id="name_check" resultType="integer">
+select count(*) from members where not name=#{loginname} and name=#{name}
+</select>
+
+
+<update id="update">
+update members set pw=#{pw}, job=#{job}, name=#{name} where email=#{email}
+</update>
+
+<select id="list" resultType="mypage.MyPageVO">
+select * from members
+</select>
+
+
+</mapper>

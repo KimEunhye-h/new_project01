@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FriendList"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="0">
+
+        <Button
+            android:id="@+id/friendList_back_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@drawable/back_view3"
+            />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/block_color4"
+            android:gravity="left|center"
+            android:text="친구 목록"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="160dp"
+            tools:layout_editor_absoluteY="41dp"
+            android:fontFamily="@font/notosansb"
+            android:layout_weight="8.5"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="33.3"
+            android:gravity="center"
+            android:text="닉네임"
+            android:textSize="18dp"
+            android:background="@drawable/friendstroke"
+            android:fontFamily="@font/notosansb"
+            android:textColor="@color/textcolor"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="33.3"
+            android:text="총 공부 시간"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:background="@drawable/friendstroke"
+            android:fontFamily="@font/notosansb"
+            android:textColor="@color/textcolor"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="33.3"
+            android:text="삭제"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:background="@drawable/friendstroke"
+            android:fontFamily="@font/notosansb"
+            android:textColor="@color/textcolor"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:orientation="vertical"
+        android:background="@drawable/btn_gray_back"
+        />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="610dp">
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="610dp"
+                layout="@layout/content_main"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="330dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="34dp"
+                android:backgroundTint="@color/colorMain"
+                android:clickable="true"
+                app:srcCompat="@drawable/plus_icon"  />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

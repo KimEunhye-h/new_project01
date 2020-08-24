@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="home.mapper">
+
+
+<select id="home_listpr" resultType="press.PressVO">
+   select * from press order by id desc
+</select>
+
+
+<select id="home_listev" resultType="event.EventVO">
+   select * from event order by id desc
+</select>
+
+<select id="home_listno" resultType="notice.NoticeVO">
+   select * from web_notice order by id desc
+</select>
+
+<select id="home_list" resultType="message.MylistVO">
+	select * from mylist
+</select>
+
+<select id="home_com_list" resultType="message.MylistVO">
+	select * from mylist
+</select>
+
+</mapper>

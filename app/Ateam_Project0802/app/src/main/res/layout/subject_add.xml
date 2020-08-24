@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat"
+        app:elevation="0dp"
+        android:translationZ="0.1dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/block_color4"
+            android:gravity="center_horizontal"
+            app:contentInsetStart="0dp"
+            app:popupTheme="@style/Widget.AppCompat.Toolbar"
+            >
+
+            <TextView
+                android:id="@+id/toolbarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="과목 추가하기"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="100dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/notosansb"/>
+            <TextView
+                android:id="@+id/sub_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="추가"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:gravity="right"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/notosansb"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="측정할 과목 이름"
+        android:textColor="@color/colorMain"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/notosansb"/>
+
+
+    <EditText
+        android:id="@+id/subjectEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex)수학,영어,과학,한국사..."
+        android:textSize="13sp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="5dp"
+        android:fontFamily="@font/notosansb"/>
+</LinearLayout>

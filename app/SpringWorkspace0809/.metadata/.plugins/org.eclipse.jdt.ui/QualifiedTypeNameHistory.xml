@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.csslect.app.raspcommand.RaspSetDataCommand"/>
+<fullyQualifiedTypeName name="com.csslect.app.raspdao.RaspDao"/>
+<fullyQualifiedTypeName name="com.csslect.app.raspdto.RaspDto"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="com.csslect.app.raspcommand.RaspGetDataCommand"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="com.csslect.app.command.ALoginCommand"/>
+<fullyQualifiedTypeName name="com.csslect.app.dto.MemberDTO"/>
+<fullyQualifiedTypeName name="com.csslect.app.command.AJoinCommand"/>
+<fullyQualifiedTypeName name="com.csslect.app.command.SubjectCommand"/>
+<fullyQualifiedTypeName name="com.csslect.app.command.SubjectListCommand"/>
+<fullyQualifiedTypeName name="com.csslect.app.dto.SubjectDTO"/>
+<fullyQualifiedTypeName name="com.csslect.app.command.SubjectDeleteCommand"/>
+<fullyQualifiedTypeName name="com.csslect.app.command.ItemInsertMultiCommand"/>
+<fullyQualifiedTypeName name="com.csslect.app.command.SubjectDdayCommand"/>
+<fullyQualifiedTypeName name="com.csslect.app.command.FriendListCommand"/>
+<fullyQualifiedTypeName name="com.csslect.app.dao.FriendDAO"/>
+<fullyQualifiedTypeName name="com.csslect.app.command.FriendAddCommand"/>
+<fullyQualifiedTypeName name="com.csslect.app.dto.AdminMemberListDTO"/>
+<fullyQualifiedTypeName name="com.csslect.app.command.NoticeAddCommand"/>
+<fullyQualifiedTypeName name="com.csslect.app.dao.NoticeDAO"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="com.csslect.app.command.LoginCommand"/>
+<fullyQualifiedTypeName name="javax.naming.Context"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="com.csslect.app.command.SignUpCommand"/>
+<fullyQualifiedTypeName name="com.csslect.app.dto.SubjectDayTotalDTO"/>
+<fullyQualifiedTypeName name="com.csslect.app.command.studyCalSelectMultiInitCommand"/>
+</qualifiedTypeNameHistroy>

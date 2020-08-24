@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/child_fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/myPage_back_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@drawable/back_view3">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text=" 계정설정"
+            android:textSize="20sp"
+            android:gravity="center|left"
+            tools:layout_editor_absoluteX="212dp"
+            tools:layout_editor_absoluteY="30dp"
+            android:background="@drawable/block_color4"
+            android:fontFamily="@font/notosansb"
+            android:textColor="#fff"
+            android:layout_weight="8.5"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/noticebackground"
+        android:gravity="center|left"
+        android:text="닉네임 변경"
+        android:paddingLeft="10dp"
+        android:textSize="16sp"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/noticebackground"
+        android:gravity="center|left"
+        android:text="카테고리(직업) 변경"
+
+        android:paddingLeft="10dp"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/noticebackground"
+        android:gravity="center|left"
+        android:text="탈퇴하기"
+        android:paddingLeft="10dp"
+        android:textSize="16sp" />
+
+</LinearLayout>

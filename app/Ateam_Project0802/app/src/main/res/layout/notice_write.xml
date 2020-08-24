@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/block_color4"
+        android:fontFamily="@font/notosansb"
+        android:gravity="center"
+        android:text="공지사항 작성"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="41dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center|top">
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="380dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="제목을 입력해 주세요."
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:background="@drawable/noticelistbackground"
+        android:fontFamily="@font/notosansb"/>
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="380dp"
+        android:layout_height="300dp"
+        android:ems="10"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="0dp"
+        android:paddingLeft="10dp"
+        android:gravity="start|top"
+        android:hint="내용을 입력해 주세요."
+        android:inputType="textMultiLine"
+        android:background="@drawable/noticelistbackground"
+        android:fontFamily="@font/notosansb"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:gravity="center"
+        android:layout_marginTop="15dp">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_org"
+        android:textColor="#fff"
+        android:text="저장"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_weight="40"
+        android:fontFamily="@font/notosansb"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            />
+
+        <Button
+            android:id="@+id/button_notice_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/block_color4_radius_line_org"
+            android:textColor="#000"
+            android:text="취소"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_weight="40"
+            android:fontFamily="@font/notosans"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

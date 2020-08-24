@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StudyCalSubDay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/studycal_day_back_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@drawable/back_view3">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text=" 일일 공부 기록"
+            android:textSize="20sp"
+            android:gravity="center|left"
+            android:background="@drawable/block_color4"
+            android:fontFamily="@font/notosansb"
+            android:textColor="#fff"
+            android:layout_weight="8.5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="530dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@drawable/stroke_bottom"
+        android:layout_marginTop="30dp"
+        android:elevation="0dp">
+
+        <TextView
+            android:id="@+id/tvSub1_1"
+            android:layout_width="360dp"
+            android:layout_height="35dp"
+            android:textSize="20sp"
+            android:text=""
+            android:textColor="#fff"
+            android:gravity="center"
+            android:background="@color/colorMain"
+            android:fontFamily="@font/notosansb"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:elevation="1dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="100"
+            android:background="@drawable/stroke_bottom">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="100">
+
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="35dp"
+                        android:background="#fff"
+                        android:elevation="5dp">
+
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="35dp"
+                            android:background="@color/colorMain"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/notosansb"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="0dp"
+                            android:text="오늘 공부한 시간"/>
+
+                        <TextView
+                            android:id="@+id/tvSub1"
+                            android:layout_width="250dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/colorMain"
+                            android:textSize="30dp"
+                            android:fontFamily="@font/pen"
+                            android:background="@drawable/stroke_top_bottom"
+                            android:text="하루 공부한 시간 내용"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="40dp"
+                        android:layout_gravity="center"
+                        android:background="#fff"
+                        android:elevation="5dp">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="35dp"
+                            android:background="@color/colorMain"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/notosansb"
+                            android:textStyle="bold"
+                            android:textColor="#fff"
+                            android:textSize="20dp"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="0dp"
+                            android:text="과목별 공부 시간"/>
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:background="@drawable/stroke_top_bottom">
+
+                            <TextView
+                                android:id="@+id/tvSub2"
+                                android:layout_width="250dp"
+                                android:layout_height="140dp"
+                                android:textColor="@color/colorMain"
+                                android:paddingTop="10dp"
+                                android:textSize="30dp"
+                                android:fontFamily="@font/pen"
+                                android:gravity="center|top"
+                                android:text="과목별 공부 시간 내용" />
+
+                        </ScrollView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="290dp"
+                    android:background="@drawable/pin_blue"/>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="130dp"
+                    android:layout_marginLeft="290dp"
+                    android:background="@drawable/pin_blue"/>
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/doodle"
+                    android:layout_marginTop="400dp"
+                    android:layout_marginLeft="260dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

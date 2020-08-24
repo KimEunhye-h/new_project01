@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="notice.mapper">
+
+
+
+<insert id="reply_insert">
+<!-- 원글의 root와 root가 같고 원글의 step보다 더큰step를 가진 글에대해서는 +1을 먼저한다 -->
+<![CDATA[
+{call declare begin
+update web_notice set step= step+1
+where root=#{root} and step> #{step};
+
+insert into web_notice (id, root, title, content, writer, step, indent, filename, filepath)
+values(seq_web_notice.nextval, #{root}, #{title}, #{content}, #{writer}, #{step}+1, #{indent}+1,
+ #{filename, jdbcType=VARCHAR}, #{filepath, jdbcType=VARCHAR});
+end}
+]]>
+</insert>
+
+<sql id="search_where">
+<if test="search=='title' or search=='content' ">
+where ${search} like '%'|| #{keyword} || '%'
+</if>
+<if test="search=='writer'">
+where <include refid="search_writer"/>
+</if>
+<if test="search=='all'">
+where title like '%' || #{keyword} || '%'
+or content like '%' || #{keyword} || '%'
+or <include refid="search_writer"/>
+</if>
+</sql>
+
+<sql id="search_writer">
+writer in (select name from members where name like '%' || #{keyword} || '%')
+</sql>
+
+<update id="update">
+update web_notice set title=#{title}, content=#{content}
+	,filename=#{filename, jdbcType=VARCHAR}, filepath=#{filepath, jdbcType=VARCHAR}
+where id=#{id}
+</update>
+  
+<delete id="delete">
+delete from web_notice where id=#{id}
+
+</delete>
+
+<update id="read">
+update web_notice set readcnt= readcnt+1 where id=#{id}
+</update>
+
+<select id="detail" resultType="notice.NoticeVO">
+select n.*, (select name from members m where m.name=n.writer) name from web_notice n where id=#{id}
+</select>
+
+<insert id="insert">
+insert into web_notice(id, root, title, content, writer, filename, filepath)
+values(seq_web_notice.nextval, seq_web_notice.currval,
+#{title}, #{content}, #{writer}, #{filename, jdbcType=VARCHAR},#{filepath, jdbcType=VARCHAR})
+</insert>
+
+<select id="list" resultType="notice.NoticeVO">
+select * from
+(select rownum no, n.*,
+		(select name from members m where m.name=writer) name from
+	(select * from web_notice <include refid="search_where"/> order by root, step desc) n
+	order by no desc) n
+where no between #{beginList} and #{endList}
+
+</select>
+
+<select id="totalList" resultType="integer">
+select count(*) from web_notice <include refid="search_where"/>
+</select>
+
+</mapper>

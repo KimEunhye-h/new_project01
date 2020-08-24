@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".D_day_RecyclerViewMain">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/imageButton1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@drawable/back_view3"
+            />
+
+        <TextView
+            android:id="@+id/d_day_title"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/block_color4"
+            android:gravity="left|center"
+            android:text="D-Days"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="160dp"
+            tools:layout_editor_absoluteY="41dp"
+            android:fontFamily="@font/notosansb"
+            android:layout_weight="8.5"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/Plus2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="330dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="34dp"
+                android:backgroundTint="@color/colorMain"
+                android:clickable="true"
+                app:srcCompat="@drawable/plus_icon" />
+
+
+        </RelativeLayout>
+
+
+
+</LinearLayout>
+
+
+
+
+

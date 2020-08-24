@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/friendstroke_all"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"/>
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="30"
+        android:layout_gravity="center">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:text="로그인"
+            android:textColor="@color/colorMain"
+            android:fontFamily="@font/notosans"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:backgroundTint="@color/colorMain"
+        android:fontFamily="@font/notosansb"
+        android:hint="아이디"
+        android:textColorHint="#C3C3C3"
+        android:textColor="@color/colorMain"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/etPw"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:backgroundTint="@color/colorMain"
+        android:fontFamily="@font/notosansb"
+        android:hint="비밀번호"
+        android:textColorHint="#C3C3C3"
+        android:textColor="@color/colorMain"
+        android:inputType="textPassword"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="100"
+        android:layout_weight="25"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fontFamily="@font/dh"
+            android:text="로그인"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/block_color4_radius"
+            android:textColor="#fff"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_weight="40"
+            />
+
+        <Button
+            android:id="@+id/btnJoin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/notosans"
+            android:text="회원가입"
+            android:background="@drawable/block_color4_radius_line"
+            android:textColor="@color/textcolorsub"
+            android:layout_weight="40"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="10dp"
+        android:orientation="horizontal"
+        android:layout_weight="3"
+        android:layout_gravity="center"
+        android:weightSum="10">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="4.6"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorMain"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:text="또는"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/colorMain"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="4.6"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorMain"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="10"
+        android:gravity="center"
+        >
+
+    <com.nhn.android.naverlogin.ui.view.OAuthLoginButton
+        android:id="@+id/Naver"
+        android:layout_width="274dp"
+        android:layout_height="50dp"
+        android:text="Naver"
+        />
+
+    </LinearLayout>
+
+
+</LinearLayout>

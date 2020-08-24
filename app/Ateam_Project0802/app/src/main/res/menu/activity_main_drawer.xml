@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_notice"
+            android:icon="@android:drawable/ic_menu_report_image"
+            android:title="공지사항"/>
+        <item
+            android:id="@+id/nav_mypage"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="계정/기능설정"/>
+        <item
+            android:id="@+id/nav_dday"
+            android:icon="@android:drawable/ic_menu_my_calendar"
+            android:title="D-DAY"/>
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@android:drawable/ic_menu_help"
+            android:title="도움말"/>
+        <item
+            android:id="@+id/nav_question"
+            android:icon="@android:drawable/ic_menu_set_as"
+            android:title="문의하기"/>
+        <item
+            android:id="@+id/nav_logOut"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="로그아웃"/>
+
+    </group>
+
+    <item
+        android:id="@+id/communi"
+        android:title="관리자 메뉴"
+        android:visible="false">
+        <menu>
+            <item
+                android:id="@+id/nav_member_list_all"
+                android:icon="@android:drawable/ic_menu_share"
+                android:title="전체회원관리"/>
+            <item
+                android:id="@+id/nav_notice_write"
+                android:icon="@android:drawable/ic_menu_edit"
+                android:title="공지사항 글쓰기"/>
+        </menu>
+    </item>
+
+
+</menu>

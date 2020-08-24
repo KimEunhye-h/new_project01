@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#ffffff"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:text="프레그먼드 3"
+        android:background="#000000"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="155dp" />
+</LinearLayout>

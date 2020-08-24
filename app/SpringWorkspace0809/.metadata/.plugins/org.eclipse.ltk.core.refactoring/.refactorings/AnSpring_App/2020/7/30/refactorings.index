@@ -1,0 +1,14 @@
+1595140699010	Rename type 'ItemDAO'
+1595151663662	Rename type 'ItemDTO'
+1595395955551	Rename type 'MemberController'
+1595396057453	Rename type 'MemberDeleteMultiCommand'
+1595396085578	Rename type 'MemberSelectMultiCommand'
+1595399277151	Rename type 'MemberListDAO'
+1595399369523	Rename type 'MemberListDTO'
+1595406901125	Rename type 'noticeDTO'
+1595407256501	Delete element
+1595407268133	Delete elements
+1595407280668	Delete element
+1595407536624	Delete element
+1595573911382	Rename type 'ChangeNameController'
+1595574510509	Rename type 'MemberDeleteCommand'

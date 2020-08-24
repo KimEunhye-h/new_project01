@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/friendstroke_all"
+    android:orientation="vertical"
+    android:weightSum="100"
+    >
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="10"
+        android:text="회원 가입"
+        android:textSize="30dp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:gravity="bottom"
+        android:textColor="@color/colorMain"
+        android:fontFamily="@font/notosansb"/>
+
+
+    <!--<TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="79dp"
+        android:text="Email : "
+        android:textSize="18sp" />-->
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/colorMain"
+        android:inputType="textPersonName"
+        android:hint="이메일"
+        android:textColorHint="#C3C3C3"
+        android:layout_weight="12"
+        android:fontFamily="@font/notosansb"/>
+
+    <!--<TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="149dp"
+        android:text="PASSWORD : " />-->
+
+    <EditText
+        android:id="@+id/etPw"
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/colorMain"
+        android:inputType="textPersonName"
+        android:layout_weight="12"
+        android:textColorHint="#C3C3C3"
+        android:hint="비밀번호"
+        android:fontFamily="@font/notosansb"/>
+
+    <!--<TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="212dp"
+        android:text="NAME : " />-->
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/colorMain"
+        android:inputType="textPersonName"
+        android:layout_weight="12"
+        android:textColorHint="#C3C3C3"
+        android:hint="닉네임"
+        android:fontFamily="@font/notosansb"/>
+
+    <!--<TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="81dp"
+        android:layout_marginLeft="81dp"
+        android:layout_marginTop="285dp"
+        android:text="job : " />-->
+
+    <EditText
+        android:id="@+id/etJob"
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/colorMain"
+        android:inputType="textPersonName"
+        android:layout_weight="12"
+        android:textColorHint="#C3C3C3"
+        android:hint="직업 카테고리"
+        android:fontFamily="@font/notosansb"/>
+
+    <Button
+        android:id="@+id/btnJoin"
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="10"
+        android:background="@drawable/block_color4_radius"
+        android:textColor="#fff"
+        android:text="가입"
+        android:textSize="16dp"
+        android:fontFamily="@font/notosansb"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="10"
+        android:background="@drawable/block_color4_radius_line"
+        android:text="취소"
+        android:textSize="16dp"
+        android:fontFamily="@font/notosansb"
+        style="?android:attr/borderlessButtonStyle"
+         />
+
+
+</LinearLayout>

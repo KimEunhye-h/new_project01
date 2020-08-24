@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:orientation="vertical"
+   >
+
+    <!--<CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="392dp"
+        android:layout_height="414dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39"
+        android:dateTextAppearance="@android:style/TextAppearance.Large"
+        android:weekDayTextAppearance="@android:style/TextAppearance.Large"/>-->
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/cal_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@drawable/back_view3">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text=" 마이 타임 캘린더"
+            android:textSize="20sp"
+            android:gravity="center|left"
+            android:background="@drawable/block_color4"
+            android:fontFamily="@font/notosansb"
+            android:textColor="#fff"
+            android:layout_weight="8.5"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="14"
+        android:weightSum="10"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/weekTv"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/colorMain"
+            android:gravity="center"
+            android:text="Monthly Best Record"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_weight="5"
+            android:fontFamily="@font/notosansb"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/stroke_top_bottom"/>
+
+        <TextView
+            android:id="@+id/recordTv"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:paddingBottom="3dp"
+            android:textSize="16sp"
+            android:paddingRight="7dp"
+            android:textColor="@color/colorMain"
+            android:fontFamily="@font/notosansb"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:gravity="center"
+            android:layout_weight="4.8"
+            android:background="@drawable/stroke_top_bottom"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="72"
+        android:layout_gravity="center"
+        android:weightSum="10">
+
+    <TextView
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:layout_gravity="center"
+        android:background="@color/colorMain"
+        android:text="Calander"
+        android:textColor="#fff"
+        android:fontFamily="@font/notosansb"
+        android:gravity="center_horizontal|center_vertical"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        />
+
+
+    <sun.bob.mcalendarview.MCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="360dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="8.8"
+        android:padding="10dp"
+        android:background="@drawable/stroke_top_bottom"/>
+
+    <TextView
+        android:id="@+id/alTV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="right|center"
+        android:gravity="center"
+        android:text="공부한기록이 있으면 ●"
+        android:layout_marginRight="30dp"
+        android:layout_weight="0.6"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_weight="9"
+        android:gravity="center|bottom">
+
+        <Button
+            android:id="@+id/weekBtn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/block_color4_radius_line_org"
+            android:text="이번 주 공부기록"
+            android:textColor="@color/colorMain"
+            android:fontFamily="@font/notosansb"
+            android:layout_weight="4"
+            android:gravity="center"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/monBtn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/block_color4_radius_line_org"
+            android:text="이번 달 공부기록"
+            android:textColor="@color/colorMain"
+            android:fontFamily="@font/notosansb"
+            android:layout_weight="4"
+            android:gravity="center"
+            style="?android:attr/borderlessButtonStyle"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

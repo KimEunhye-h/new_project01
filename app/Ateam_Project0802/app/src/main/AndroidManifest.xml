@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ateam_project">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <!-- http 라이브러리 사용 -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".MainActivity">
+
+
+        </activity>
+        <activity android:name=".Fragment.Fragment11"/>
+        <activity android:name=".Fragment.Fragment33"/>
+        <activity android:name=".Subject_Add"/>
+        <activity android:name=".D_day_RecyclerViewMain">
+
+        </activity>
+        <activity android:name=".HelpPage">
+
+
+
+        </activity>
+        <activity android:name=".Ddayplus"></activity>
+        <activity android:name=".FriendList"/>
+        <activity android:name=".FriendAdd"/>
+
+        <activity android:name=".Admin_Member_List">
+
+
+        </activity>
+        <activity android:name=".NoticeListDetail">
+
+        </activity>
+        <activity android:name=".LoadingSplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+        <activity android:name=".SignUpNaverActivity">
+
+
+        </activity>
+        <activity android:name=".NoticeList"/>
+        <activity android:name=".NoticeWrite"/>
+        <activity android:name=".MyPageJob"/>
+        <activity android:name=".MyPageNickName"/>
+        <activity android:name=".MyPageMain"/>
+        <activity android:name=".LoginActivity">
+        </activity>
+        <activity android:name=".SignUpActivity"/>
+        <activity android:name=".Sub_PopupActivity"
+            android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".Sub_webView"
+            android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".Sub_StopwarchMain_Activity"/>
+        <activity android:name=".StudyCalMain"/>
+        <activity android:name=".StudyCalSubDay"/>
+        <activity android:name=".StudyCalSubMonth"/>
+        <activity android:name=".StudyCalSubWeek"/>
+
+
+
+
+
+        <!-- API24 이상부터 Url 이 file:// 로 시작되면 안되서 content:// 으로 변환시키는 부분 -->
+        <provider
+            android:authorities="${applicationId}.fileprovider"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"/>
+        </provider>
+    </application>
+
+</manifest>

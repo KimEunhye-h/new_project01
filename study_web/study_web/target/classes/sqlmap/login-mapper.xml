@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="login.mapper">
+
+<insert id="join">
+insert into members(email, name, pw, job, parents)
+values (#{email}, #{name}, #{pw}, #{job}, #{parents} )
+</insert>
+
+
+<select id="email_check" resultType="integer">
+select count(*) from members where email=#{email}
+</select>
+
+
+<select id="login" resultType="login.LoginVO">
+select * from members where email=#{id} and pw=#{pw}
+</select>
+
+
+<select id="time_mon" resultType="login.LoginVO">
+select trim(to_char(h+floor((m+floor(s/60))/60),'00')) || ':' || trim(to_char(mod(m+floor(s/60),60),'00')) || ':' || trim(to_char(mod(s,60),'00')) total from (select sum(substr(time, 1,2)) h, sum(substr(time, 4,2)) m, sum(substr(time, 7,2)) s from study where name=#{name} and today = TO_CHAR(TRUNC(sysdate,'iw') ,'yy/mm/dd') ) s
+</select>
+
+<select id="time_tue" resultType="login.LoginVO">
+select trim(to_char(h+floor((m+floor(s/60))/60),'00')) || ':' || trim(to_char(mod(m+floor(s/60),60),'00')) || ':' || trim(to_char(mod(s,60),'00')) total from (select sum(substr(time, 1,2)) h, sum(substr(time, 4,2)) m, sum(substr(time, 7,2)) s from study where name=#{name} and today = TO_CHAR(TRUNC(sysdate,'iw')+1 ,'yy/mm/dd') ) s
+</select>
+
+<select id="time_wed" resultType="login.LoginVO">
+select trim(to_char(h+floor((m+floor(s/60))/60),'00')) || ':' || trim(to_char(mod(m+floor(s/60),60),'00')) || ':' || trim(to_char(mod(s,60),'00')) total from (select sum(substr(time, 1,2)) h, sum(substr(time, 4,2)) m, sum(substr(time, 7,2)) s from study where name=#{name} and today = TO_CHAR(TRUNC(sysdate,'iw')+2 ,'yy/mm/dd') ) s
+</select>
+<select id="time_thu" resultType="login.LoginVO">
+select trim(to_char(h+floor((m+floor(s/60))/60),'00')) || ':' || trim(to_char(mod(m+floor(s/60),60),'00')) || ':' || trim(to_char(mod(s,60),'00')) total from (select sum(substr(time, 1,2)) h, sum(substr(time, 4,2)) m, sum(substr(time, 7,2)) s from study where name=#{name} and today = TO_CHAR(TRUNC(sysdate,'iw')+3 ,'yy/mm/dd') ) s
+</select>
+<select id="time_fri" resultType="login.LoginVO">
+select trim(to_char(h+floor((m+floor(s/60))/60),'00')) || ':' || trim(to_char(mod(m+floor(s/60),60),'00')) || ':' || trim(to_char(mod(s,60),'00')) total from (select sum(substr(time, 1,2)) h, sum(substr(time, 4,2)) m, sum(substr(time, 7,2)) s from study where name=#{name} and today = TO_CHAR(TRUNC(sysdate,'iw')+4 ,'yy/mm/dd') ) s
+</select>
+<select id="time_sat" resultType="login.LoginVO">
+select trim(to_char(h+floor((m+floor(s/60))/60),'00')) || ':' || trim(to_char(mod(m+floor(s/60),60),'00')) || ':' || trim(to_char(mod(s,60),'00')) total from (select sum(substr(time, 1,2)) h, sum(substr(time, 4,2)) m, sum(substr(time, 7,2)) s from study where name=#{name} and today = TO_CHAR(TRUNC(sysdate,'iw')+5 ,'yy/mm/dd') ) s
+</select>
+<select id="time_sun" resultType="login.LoginVO">
+select trim(to_char(h+floor((m+floor(s/60))/60),'00')) || ':' || trim(to_char(mod(m+floor(s/60),60),'00')) || ':' || trim(to_char(mod(s,60),'00')) total from (select sum(substr(time, 1,2)) h, sum(substr(time, 4,2)) m, sum(substr(time, 7,2)) s from study where name=#{name} and today = TO_CHAR(TRUNC(sysdate,'iw')+6 ,'yy/mm/dd') ) s
+</select>
+
+<select id="name_check" resultType="integer">
+select count(*) from members where name=#{name}
+</select>
+
+<insert id="fileInsert">
+insert into adminimg (num,writer,filename,filepath)
+values (#{num},#{writer},#{filename, jdbcType=VARCHAR},#{filepath, jdbcType=VARCHAR})
+</insert>
+
+<select id="detail" resultType="education.adminImgVO">
+select * from adminimg where num = #{num}
+</select>
+
+<update id="update">
+update adminimg set filename=#{filename, jdbcType=VARCHAR}, filepath=#{filepath, jdbcType=VARCHAR} where num=#{num}
+</update>
+
+<select id="list" resultType="education.adminImgVO">
+select * from adminimg order by num
+</select>
+
+</mapper>

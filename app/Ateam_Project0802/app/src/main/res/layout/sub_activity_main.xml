@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000"
+    android:weightSum="100">
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="25"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="100"
+            android:background="@drawable/edge_time">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:fontFamily="@font/notosansb"
+                    android:text="총 공부시간"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:gravity="bottom"
+                    android:layout_weight="35"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="65"
+                    android:weightSum="100"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+
+
+                        <TextView
+                            android:id="@+id/time_out"
+                            android:layout_width="0dp"
+                            android:layout_height="110dp"
+                            android:layout_marginBottom="45dp"
+                            android:background="#000a12"
+                            android:fontFamily="@font/notosans"
+                            android:gravity="center|top"
+                            android:paddingRight="10dp"
+                            android:text="00:00:00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="60sp"
+                            android:layout_weight="70"/>
+
+                        <Button
+                            android:id="@+id/btn_start"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/war_stop"
+                            android:onClick="myOnClick"
+                            android:scaleType="centerInside"
+                            android:textColor="@android:color/background_dark"
+                            android:layout_weight="15"
+                            android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="75"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vpPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="100"/>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            app:tabBackground="@color/textcolorblack"
+            app:tabIndicatorColor="#FFFFFF"
+            app:tabSelectedTextColor="#FFFFFF"
+            app:tabIconTint="#FFFFFF"
+            android:fontFamily="@font/notosans">
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_Item1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tab1" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_Item2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tab2" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+</LinearLayout>
